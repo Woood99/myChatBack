@@ -9,7 +9,7 @@ const http = require('http').Server(app);
 
 const socketIO = require('socket.io')(http, {
    cors: {
-      origin: `http://localhost:${PORT_APP}`,
+      origin: `https://mychatback.onrender.com`,
    },
 });
 
