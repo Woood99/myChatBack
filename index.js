@@ -5,11 +5,13 @@ const app = express();
 const PORT = 5000;
 const PORT_APP = 5173;
 
+const URL = 'https://mychatback.onrender.com'
+
 const http = require('http').Server(app);
 
 const socketIO = require('socket.io')(http, {
    cors: {
-      origin: `https://mychatback.onrender.com`,
+      origin: URL
    },
 });
 
@@ -40,6 +42,6 @@ socketIO.on('connection', socket => {
    });
 });
 
-http.listen(PORT, () => {
+http.listen(URL, () => {
    console.log('Server working');
 });
